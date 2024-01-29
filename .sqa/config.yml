@@ -1,0 +1,42 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/gdkrmr/dimRed:
+      branch: master
+      repo: https://github.com/gdkrmr/dimRed
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/gdkrmr/dimRed git:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-ochre-yak.sh
+        container: qc.acc_tasty-seashell-caiman
+  QC.Doc:
+    repos:
+      github.com/gdkrmr/dimRed find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-charcoal-olm.sh
+        container: qc.doc_dorky-saffron-bongo
+      github.com/gdkrmr/dimRed git:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-myrtle-chin.sh
+        container: qc.doc_snoopy-chartreuse-maltese
+  QC.Lic:
+    repos:
+      github.com/gdkrmr/dimRed licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-tangerine-cuttlefish.sh
+        container: qc.lic_squeaky-bistre-liger
+  QC.Ver:
+    repos:
+      github.com/gdkrmr/dimRed get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-vermilion-dachshund.sh
+        container: qc.ver_lanky-tan-argentino
+timeout: 5400
