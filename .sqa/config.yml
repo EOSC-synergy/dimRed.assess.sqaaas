@@ -15,28 +15,28 @@ sqa_criteria:
     repos:
       github.com/gdkrmr/dimRed git:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-ochre-yak.sh
-        container: qc.acc_tasty-seashell-caiman
+        - /usr/bin/env sh .sqa/script.sleepy-saffron-stingray.sh
+        container: qc.acc_scanty-corn-wallaby
   QC.Doc:
     repos:
       github.com/gdkrmr/dimRed find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-charcoal-olm.sh
-        container: qc.doc_dorky-saffron-bongo
+        - /usr/bin/env sh .sqa/script.smelly-russet-whale.sh
+        container: qc.doc_lumpy-lemon-chow
       github.com/gdkrmr/dimRed git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-myrtle-chin.sh
-        container: qc.doc_snoopy-chartreuse-maltese
+        - /usr/bin/env sh .sqa/script.geeky-heliotrope-kakapo.sh
+        container: qc.doc_snippy-cream-vole
   QC.Lic:
     repos:
       github.com/gdkrmr/dimRed licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-tangerine-cuttlefish.sh
-        container: qc.lic_squeaky-bistre-liger
+        - /usr/bin/env sh .sqa/script.squirrely-azure-eel.sh
+        container: qc.lic_woozy-seashell-crocodile
   QC.Ver:
     repos:
       github.com/gdkrmr/dimRed get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-vermilion-dachshund.sh
-        container: qc.ver_lanky-tan-argentino
+        - /usr/bin/env sh .sqa/script.snippy-chocolate-woodlouse.sh
+        container: qc.ver_scanty-saffron-frise
 timeout: 5400
